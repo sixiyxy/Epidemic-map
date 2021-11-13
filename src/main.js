@@ -1,13 +1,13 @@
-import Vue from 'vue'
-import App from './App.vue'
-import router from './router'
-import "./assets/css/common.css"
-import api from "./api/index"
+import Vue from "vue";
+import App from "./App.vue";
+import router from "./router";
+import "./assets/css/common.css";
+import api from "./api/index";
 
 Vue.prototype.$api = api;
-Vue.config.productionTip = false
+Vue.config.productionTip = false;
 
 new Vue({
   router,
-  render: h => h(App)
-}).$mount('#app')
+  render: (h) => h(App),
+}).$mount("#app");
