@@ -2,12 +2,15 @@
   <div class="home">
     <Header />
     <Info :infoData="infoData" />
+    <Map />
   </div>
 </template>
 
 <script>
+
 import Header from "../components/Header";
 import Info from "../components/Info";
+import Map from "../components/Map.vue"
 
 export default {
   name: "Home",
@@ -36,6 +39,7 @@ export default {
   components: {
     Header,
     Info,
+    Map
   },
 };
 </script>
