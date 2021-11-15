@@ -3,6 +3,8 @@
     <Header />
     <Info :infoData="infoData" />
     <Map />
+    <News :newsData="newsData" />
+    <Footer />
   </div>
 </template>
 
@@ -11,12 +13,16 @@
 import Header from "../components/Header";
 import Info from "../components/Info";
 import Map from "../components/Map.vue"
+import News from "../components/News";
+import Footer from  "../components/Footer";
+
 
 export default {
   name: "Home",
   data() {
     return {
       infoData: {},
+      newsData:[]
     };
   },
   created() {
@@ -26,6 +32,7 @@ export default {
       })
       .then((res) => {
         console.log(res);
+        this.newsData = res.newslist[0].news
         this.infoData = {
           note1: res.newslist[0].desc.note1,
           note2: res.newslist[0].desc.note2,
@@ -39,7 +46,9 @@ export default {
   components: {
     Header,
     Info,
-    Map
+    Map,
+    News,
+    Footer
   },
 };
 </script>
