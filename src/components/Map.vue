@@ -7,6 +7,7 @@
     </div>
 </template>
 
+<script src="https://www.echartsjs.com/examples/vendors/jquery/jquery.js"></script>
 <script>
 export default {
     name: "Map",
@@ -17,6 +18,47 @@ export default {
     },
     mounted() {
         this.$charts.chinaMap("chinaMap")
+        let component = this;
+        var newArr = [];
+        this.$.ajax({
+            url: "https://view.inews.qq.com/g2/getOnsInfo?name=disease_h5",
+            dataType: "jsonp",
+            success: function (data) {
+                //console.log(data.data)
+                var res = data.data || "";
+                res = JSON.parse(res);
+                //console.log(res)
+                if (res) {
+                    var province = res.areaTree[0].children;
+                    for (var i = 0; i < province.length; i++) {
+                        var json = {
+                            name: province[i].name,
+                            value: province[i].total.nowConfirm
+                        }   
+                    newArr.push(json) 
+                    }   
+                }
+                console.log(newArr)
+                // console.log(JSON.stringify(newArr))
+                for (var i = 0; i < newArr.length; i++) {
+                    var temp = {
+                        name: newArr[i].name,
+                        value: newArr[i].value,
+                        itemStyle: {
+                            normal: {
+                                areaColor: component.setColor(
+                                    newArr[i].value
+                                )
+                            }
+                        }
+                    };
+                    component.cityMapData.push(temp);
+                }
+                console.log(component.cityMapData)
+                component.$charts.chinaMap("chinaMap", component.cityMapData);
+            }
+        })
+        
         // this.$api.getCaseNum({
         //         key: "d7c335f2e7856ec48c1962a99fcc6f98"
         //     })

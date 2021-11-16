@@ -16,7 +16,7 @@ const install = function(Vue){
                                 }
                             },
                             series:[{
-                                name:"省",
+                                name:"确诊数",
                                 type:'map',
                                 map:"china",
                                 roam:false,
