@@ -38,7 +38,7 @@ export default {
                     newArr.push(json) 
                     }   
                 }
-                console.log(newArr)
+                // console.log(newArr)
                 // console.log(JSON.stringify(newArr))
                 for (var i = 0; i < newArr.length; i++) {
                     var temp = {
@@ -54,7 +54,7 @@ export default {
                     };
                     component.cityMapData.push(temp);
                 }
-                console.log(component.cityMapData)
+                // console.log(component.cityMapData)
                 component.$charts.chinaMap("chinaMap", component.cityMapData);
             }
         })

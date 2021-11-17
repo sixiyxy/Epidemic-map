@@ -3,6 +3,7 @@
     <Header />
     <Info :infoData="infoData" />
     <Map />
+		<TreeChart />
     <News :newsData="newsData" />
     <Footer />
   </div>
@@ -15,6 +16,7 @@ import Info from "../components/Info";
 import Map from "../components/Map.vue"
 import News from "../components/News";
 import Footer from  "../components/Footer";
+import TreeChart from "../components/TreeChart";
 
 
 export default {
@@ -48,7 +50,8 @@ export default {
     Info,
     Map,
     News,
-    Footer
+		Footer,
+		TreeChart
   },
 };
 </script>

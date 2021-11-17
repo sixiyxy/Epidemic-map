@@ -6,6 +6,8 @@ import api from "./api/index";
 import Echarts from "./plugins/echarts"
 import "../node_modules/echarts/map/js/china"
 import $ from 'jquery'
+import VueAwesomeSwiper from "vue-awesome-swiper";
+import "swiper/dist/css/swiper.css";
 import "../node_modules/echarts/map/js/province/anhui"
 import "../node_modules/echarts/map/js/province/aomen"
 import "../node_modules/echarts/map/js/province/beijing"
@@ -42,7 +44,10 @@ import "../node_modules/echarts/map/js/province/yunnan"
 import "../node_modules/echarts/map/js/province/zhejiang"
 
 
-Vue.use(Echarts)
+
+
+Vue.use(Echarts);
+Vue.use(VueAwesomeSwiper);
 Vue.prototype.$api = api;
 Vue.prototype.$ = $;
 Vue.config.productionTip = false;
