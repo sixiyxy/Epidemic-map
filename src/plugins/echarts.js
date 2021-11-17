@@ -12,7 +12,7 @@ const install = function(Vue){
                                 triggerOn:"click",
                                 enterable:true,
                                 formatter(data) {
-                                    return "<a style='color:#fff' href='#/city/"+ data.name +"'><div><p>" + data.seriesName + ":" + data.name + "</p><p>现存确诊:" + data.value + "</p></div></a>"
+                                    return "<a  style='color:#fff' href='#/city/"+ data.name +"'><div><p>" + data.seriesName + ":" + data.name + "</p><p>现存确诊:" + data.value + "</p></div></a>"
                                 }
                             },
                             series:[{
@@ -54,6 +54,7 @@ const install = function(Vue){
                     },
                     provinceCity(id,city,data){
                         this.chart = echarts.init(document.getElementById(id));
+                        // console.log(data);
                         var option = {
                             tooltip:{
                                 triggerOn:"click",
@@ -76,6 +77,7 @@ const install = function(Vue){
                                 itemStyle:{
                                     normal: {
                                         areaColor: 'rgba(0,255,236,0)',
+                                        // areaColor: '#FE9E83',
                                         borderColor: 'rgba(0,0,0,0.2)',
                                     },
                                     emphasis: {
@@ -85,7 +87,9 @@ const install = function(Vue){
                                         shadowBlur: 20,
                                         borderWidth: 0,
                                         shadowColor: 'rgba(0, 0, 0, 0.5)'
-                                    }
+                                    },
+                                    
+
                                 },
                                 data:data
                             }]
