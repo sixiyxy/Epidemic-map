@@ -10,10 +10,15 @@ const routes = [
     name: "Home",
     component: Home,
   },
+  {
+    path:'/city/:id',
+    name: "City",
+    component: ()=>import('../views/City.vue')
+  }
 ];
 
 const router = new VueRouter({
-  mode: "history",
+  mode: "hash",
   base: process.env.BASE_URL,
   routes,
 });
