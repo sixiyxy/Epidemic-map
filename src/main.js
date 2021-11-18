@@ -43,9 +43,6 @@ import "../node_modules/echarts/map/js/province/xizang"
 import "../node_modules/echarts/map/js/province/yunnan"
 import "../node_modules/echarts/map/js/province/zhejiang"
 
-
-
-
 Vue.use(Echarts);
 Vue.use(VueAwesomeSwiper);
 Vue.prototype.$api = api;

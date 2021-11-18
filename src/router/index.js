@@ -14,6 +14,11 @@ const routes = [
     path:'/city/:id',
     name: "City",
     component: ()=>import('../views/City.vue')
+  },
+  {
+    path:'/mharea',
+    name:'Mharea',
+    component: ()=>import('../views/Mharea.vue')
   }
 ];
 

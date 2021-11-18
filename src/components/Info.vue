@@ -3,7 +3,12 @@
     <p class="title">
       <i></i>
       病毒信息
+      
+      <router-link to='/mharea' class="router">
+        <i style="background-color:'rgb(245,108,108)'"></i>中高风险地区</router-link>
+      
     </p>
+    
     <div class="content">
       <p>{{ infoData.remark1 }}</p>
       <p>{{ infoData.remark2 }}</p>
@@ -11,6 +16,7 @@
       <p>{{ infoData.note1 }}</p>
       <p>{{ infoData.note2 }}</p>
       <p>{{ infoData.note3 }}</p>
+      
     </div>
   </div>
 </template>
@@ -45,7 +51,7 @@ export default {
   height: 0.16rem;
   margin-right: 0.03rem;
   vertical-align: middle;
-  background: #4169e2;
+  background: #8ac2c1;
 }
 .content {
   padding: 0.06rem 0.16rem;
@@ -55,4 +61,11 @@ export default {
   font-size: 13px;
   margin: 5px 0;
 }
+.router{
+  font-size: 0.17rem;
+  float: right;
+  
+}
+
+
 </style>

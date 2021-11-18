@@ -134,7 +134,7 @@ export default {
     content:"";
     width: 5px;
     height: 20px;
-    background: #4169e2;
+    background: #8ac2c1;
     margin-right: 10px;
 }
 </style>
