@@ -40,7 +40,7 @@ export default {
                   for (var i=0;i<province.length;i++){
                     if(currentProvince === province[i].name ){
                       for(var j=0;j< province[i].children.length;j++){
-                        console.log(province[i].children[j].name);
+                        //console.log(province[i].children[j].name);
                         
                         // console.log(/[\u4E00-\u9FA5]+\u5e02$/.test(currentProvince.children[j].name));
                         // if(/[\u4E00-\u9FA5]+\u5e02$/.test(currentProvince.children[j].name)){
