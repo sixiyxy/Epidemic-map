@@ -12,7 +12,7 @@
 
 <script>
 
-import Header from "../components/Header";
+import Header from "../components/Header.vue";
 import Info from "../components/Info";
 import Map from "../components/Map.vue"
 import News from "../components/News";
@@ -44,6 +44,10 @@ export default {
           remark2: res.newslist[0].desc.remark2,
           remark3: res.newslist[0].desc.remark3,
         };
+        
+    // debugger
+    localStorage.setItem('name','李敬丹')
+    sessionStorage.setItem('res',res.newslist[0].desc)
         this.caseNumData = {
         modifyTime:res.newslist[0].desc.modifyTime,
         currentConfirmedCount:res.newslist[0].desc.currentConfirmedCount,
