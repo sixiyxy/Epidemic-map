@@ -13,7 +13,7 @@
 <script>
 
 import Header from "../components/Header.vue";
-import Info from "../components/Info";
+import Info from "../components/Info.vue";
 import Map from "../components/Map.vue"
 import News from "../components/News";
 import Footer from  "../components/Footer";
